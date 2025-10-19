@@ -78,9 +78,9 @@ async function revokeToken({ token, ipAddress }) {
 }
 
 async function register(params, origin) {
-    // validate
+    // check if email is already registered
     if (await db.Account.findOne({ where: { email: params.email } })) {
-        // send already registered error in email to prevent account enumeration
+        // send already registered email
         return await sendAlreadyRegisteredEmail(params.email, origin);
     }
 
@@ -91,8 +91,8 @@ async function register(params, origin) {
     const isFirstAccount = (await db.Account.count()) === 0;
     account.role = isFirstAccount ? Role.Admin : Role.User;
     account.verificationToken = randomTokenString();
-
-    // hash password
+    
+    //hash password
     account.passwordHash = await hash(params.password);
 
     // save account

@@ -19,6 +19,9 @@ app.use('/accounts', require('./accounts/accounts.controller'));
 // swagger docs route
 app.use('/api-docs', require('_helpers/swagger'));
 
+// department route
+app.use('/api/departments', require('./department/department.controller'));
+
 // global error handler
 app.use(errorHandler);
 
