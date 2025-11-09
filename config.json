@@ -6,14 +6,14 @@
       "password": "root",
       "database": "node-mysql-crud-api1"
     },
-    "secret": "c8b16b4a-b0e0-4441-8a88-676b7aa95484",
+    "secret": "3bae01e5-dbaa-4571-b2d3-b6ae6c8a9889",
     "fromEmail": "info@node-mysql-crud-api1",
     "smtpOptions": {
       "host": "smtp.ethereal.email",
       "port": 587,
       "auth": {
-        "user": "octavia.luettgen17@ethereal.email",
-        "pass": "4w9VB3cCZqXtuW2n7J"
+        "user": "heather80@ethereal.email",
+        "pass": "Hh7rCW2yGbV9feVV9g"
       }
     }
   }
